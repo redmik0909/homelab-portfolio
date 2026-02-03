@@ -2,7 +2,7 @@
 
 This homelab network was designed following enterprise-style segmentation principles to isolate services, IoT devices, user traffic, and management access.
 
-The core of the network is built around a multi-interface firewall using [OPNsense] with dedicated physical interfaces mapped to managed switches.
+The core of the network is built around a multi-interface firewall using OPNsense with dedicated physical interfaces mapped to managed switches.
 
 ---
 
@@ -64,7 +64,7 @@ This segment includes:
 
 - Wi-Fi infrastructure managed through [UniFi]
 - Apple TV and primary client devices
-- Smart home controllers using [Control4]
+- Smart home controllers using Control4
 
 Purpose:
 - Low latency for real-time automation systems
@@ -89,7 +89,7 @@ Purpose:
 
 ## Remote Access – WireGuard VPN
 
-Secure remote connectivity is provided using [WireGuard].
+Secure remote connectivity is provided using WireGuard.
 
 Capabilities:
 - Encrypted access to internal infrastructure
