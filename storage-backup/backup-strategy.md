@@ -12,6 +12,28 @@ The objective is to ensure consistent recovery points, automated scheduling, and
 - Backup jobs managed from the Proxmox VE interface
 - Backups use snapshot mode to avoid downtime
 
+## Offsite Storage Architecture (NFS Backend)
+
+Backup data is stored on a dedicated storage server running TrueNAS and mounted on Proxmox Backup Server via an NFS share.
+
+This design ensures:
+
+- physical separation between compute and backup storage  
+- protection against host-level failures  
+- centralized high-capacity storage for long-term retention  
+- enterprise-style backup architecture  
+
+The NFS share serves as the primary backup datastore for PBS, allowing scalable and reliable storage independent from the virtualization host.
+
+---
+
+## Architecture Benefits
+
+- backup server isolated from production workloads  
+- storage optimized for large backup datasets  
+- easier capacity expansion  
+- improved disaster recovery resilience  
+
 ---
 
 ## Automated Backup Job
